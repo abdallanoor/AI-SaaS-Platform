@@ -12,12 +12,12 @@ export default function Sidebar() {
   const pathname = usePathname();
   return (
     <aside className="sidebar">
-      <div className="flex size-full flex-col gap-4">
-        <Link href="/" className="sidebar-logo">
+      <div className="flex size-full flex-col gap-6">
+        <Link href="/" className="sidebar-logo ">
           <Image
-            src="/assets/images/logo-text.svg"
+            src="/assets/images/logo.svg"
             alt="logo"
-            width={180}
+            width={80}
             height={28}
           />
         </Link>
@@ -31,10 +31,10 @@ export default function Sidebar() {
                 return (
                   <li
                     key={link.route}
-                    className={`sidebar-nav_element group ${
+                    className={`group relative rounded-lg  w-full  ${
                       isActive
-                        ? "bg-purple-gradient text-white"
-                        : "text-gray-500"
+                        ? "bg-[#2f2f2f] "
+                        : " hover:bg-[#212121] text-[#ececec]"
                     }`}
                   >
                     <Link className="sidebar-link" href={link.route}>
@@ -43,7 +43,7 @@ export default function Sidebar() {
                         alt="logo"
                         width={24}
                         height={24}
-                        className={`${isActive && "brightness-200"}`}
+                        className="brightness-200"
                       />
                       {link.label}
                     </Link>
@@ -59,10 +59,10 @@ export default function Sidebar() {
                 return (
                   <li
                     key={link.route}
-                    className={`sidebar-nav_element group ${
+                    className={`group relative rounded-lg  w-full  ${
                       isActive
-                        ? "bg-purple-gradient text-white"
-                        : "text-gray-500"
+                        ? "bg-[#2f2f2f] text-white"
+                        : "text-white hover:bg-[#212121]"
                     }`}
                   >
                     <Link className="sidebar-link" href={link.route}>
@@ -71,7 +71,7 @@ export default function Sidebar() {
                         alt="logo"
                         width={24}
                         height={24}
-                        className={`${isActive && "brightness-200"}`}
+                        className="brightness-200"
                       />
                       {link.label}
                     </Link>
@@ -79,14 +79,14 @@ export default function Sidebar() {
                 );
               })}
 
-              <li className="flex-center cursor-pointer gap-2 p-4">
+              <li className="flex-center cursor-pointer gap-2 p-3">
                 <UserButton afterSignOutUrl="/" showName />
               </li>
             </ul>
           </SignedIn>
 
           <SignedOut>
-            <Button asChild className="button bg-purple-gradient bg-cover">
+            <Button asChild>
               <Link href="/sign-in">Login</Link>
             </Button>
           </SignedOut>

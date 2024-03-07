@@ -12,10 +12,9 @@ const IBMPlex = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Imaginify",
+  title: "Pixel Imaginify",
   description: "Ai-powered image generator",
   icons: "../public/logo-icon.png",
-  
 };
 
 export default function RootLayout({
