@@ -33,7 +33,8 @@ export default function MobileNav() {
                   src="/assets/images/logo.svg"
                   alt="logo"
                   width={80}
-                  height={23}
+                  height={24}
+                  className="w-20 h-6 my-auto"
                 />
                 <SheetClose className="flex h-8 w-8 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white focus-visible:outline-none">
                   <X className="h-4 w-4" />
@@ -59,7 +60,7 @@ export default function MobileNav() {
                           alt="logo"
                           width={20}
                           height={20}
-                          className="brightness-200"
+                          className="brightness-200 w-5 h-5"
                         />
                         {link.label}
                       </Link>
@@ -84,6 +85,7 @@ export default function MobileNav() {
           alt="logo"
           width={80}
           height={28}
+          className="w-20 h-7"
         />
       </Link>
 

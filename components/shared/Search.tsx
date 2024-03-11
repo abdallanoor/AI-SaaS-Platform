@@ -42,7 +42,7 @@ export const Search = () => {
         alt="search"
         width={24}
         height={24}
-        className="brightness-200"
+        className="brightness-200 w-6 h-6 m-auto"
       />
 
       <Input

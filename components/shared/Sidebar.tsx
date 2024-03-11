@@ -19,6 +19,7 @@ export default function Sidebar() {
             alt="logo"
             width={80}
             height={28}
+            className="w-20 h-7"
           />
         </Link>
 
