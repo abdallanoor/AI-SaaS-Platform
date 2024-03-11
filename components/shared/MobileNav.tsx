@@ -26,7 +26,7 @@ export default function MobileNav() {
             </SheetTrigger>
             <SheetContent
               side="left"
-              className="sheet-content bg-[#171717] border-stone-800 sm:w-64"
+              className="sheet-content  bg-[#171717] border-stone-800 sm:w-80"
             >
               <div className="pl-3 flex justify-between">
                 <Image
@@ -35,7 +35,7 @@ export default function MobileNav() {
                   width={80}
                   height={23}
                 />
-                <SheetClose className="flex h-10 w-10 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white focus-visible:outline-none">
+                <SheetClose className="flex h-8 w-8 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white focus-visible:outline-none">
                   <X className="h-4 w-4" />
                   <span className="sr-only">Close</span>
                 </SheetClose>

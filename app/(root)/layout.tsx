@@ -1,5 +1,6 @@
 import MobileNav from "@/components/shared/MobileNav";
 import Sidebar from "@/components/shared/Sidebar";
+import { Toaster } from "@/components/ui/toaster";
 import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,6 +15,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="root-container">
         <div className="wrapper">{children}</div>
       </div>
+      <Toaster />
     </main>
     // <div className="pr-6 transition-[padding] md:p-0 pl-20 md:pl-0">
     //   <div className="flex py-6 h-screen h-screen-ios md:py-0">
