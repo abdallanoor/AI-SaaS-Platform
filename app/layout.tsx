@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
+import NextTopLoader from "nextjs-toploader";
 
 const IBMPlex = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -30,6 +31,17 @@ export default function RootLayout({
     >
       <html lang="en">
         <body className={cn("font-IBMPlex antialiased dark", IBMPlex.variable)}>
+          <NextTopLoader
+            color="#f4f4f5"
+            initialPosition={0.08}
+            crawlSpeed={200}
+            height={3}
+            crawl={true}
+            showSpinner={true}
+            easing="ease"
+            speed={200}
+            shadow="none"
+          />
           {children}
         </body>
       </html>

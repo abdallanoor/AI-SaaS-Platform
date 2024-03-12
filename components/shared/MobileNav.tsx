@@ -18,15 +18,17 @@ export default function MobileNav() {
 
   return (
     <header className="header">
-      <Link href="/" className="flex items-center gap-2 md:py-2">
-        <Image
-          src="/assets/images/logo.svg"
-          alt="logo"
-          width={80}
-          height={28}
-          className="w-20 h-7"
-        />
-      </Link>
+      <SignedOut>
+        <Link href="/" className="flex items-center gap-2 md:py-2">
+          <Image
+            src="/assets/images/logo.svg"
+            alt="logo"
+            width={80}
+            height={28}
+            className="w-20 h-7"
+          />
+        </Link>
+      </SignedOut>
       <nav className="flex gap-2">
         <SignedIn>
           <Sheet>
@@ -87,6 +89,18 @@ export default function MobileNav() {
           </Button>
         </SignedOut>
       </nav>
+
+      <SignedIn>
+        <Link href="/" className="flex items-center gap-2 md:py-2">
+          <Image
+            src="/assets/images/logo.svg"
+            alt="logo"
+            width={80}
+            height={28}
+            className="w-20 h-7"
+          />
+        </Link>
+      </SignedIn>
 
       <SignedIn>
         <UserButton afterSignOutUrl="/" />

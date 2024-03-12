@@ -70,10 +70,10 @@ export const Collection = ({
           <PaginationContent className="flex w-full">
             <Button
               disabled={Number(page) <= 1}
-              className="collection-btn"
+              className="w-32"
               onClick={() => onPageChange("prev")}
             >
-              <PaginationPrevious className="hover:bg-transparent hover:text-white" />
+              <PaginationPrevious className="hover:bg-transparent hover:text-black/80" />
             </Button>
 
             <p className="flex-center p-16-medium w-fit flex-1">
@@ -81,11 +81,11 @@ export const Collection = ({
             </p>
 
             <Button
-              className="button w-32 bg-purple-gradient bg-cover text-white"
+              className=" w-32 "
               onClick={() => onPageChange("next")}
               disabled={Number(page) >= totalPages}
             >
-              <PaginationNext className="hover:bg-transparent hover:text-white" />
+              <PaginationNext className="hover:bg-transparent hover:text-black/80" />
             </Button>
           </PaginationContent>
         </Pagination>
@@ -105,7 +105,7 @@ const Card = ({ image }: { image: IImage }) => {
           height={image.height}
           {...image.config}
           loading="lazy"
-          className="h-80 sm:h-60 w-full rounded-[10px] object-cover"
+          className="h-80 sm:h-60 w-full rounded-md object-cover"
           sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
         />
         <div className="flex-between">
